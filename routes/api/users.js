@@ -38,7 +38,7 @@ router.post('/register', (req, res) => {
             } else {
                 const avatar = gravatar.url(req.body.email, {
                     s: '200', // size
-                    r: 'pg',  // rating  
+                    r: 'pg',  // rating
                     d: 'mm'   // default
                 });
 
@@ -64,7 +64,7 @@ router.post('/register', (req, res) => {
 });
 
 // @route   GET api/users/login
-// @desc    Login user / Returning JWT 
+// @desc    Login user / Returning JWT
 // @access  Public
 router.post('/login', (req, res) => {
     const { errors, isValid } = validateLoginInput(req.body);
@@ -92,7 +92,7 @@ router.post('/login', (req, res) => {
                     if(isMatch) {
                         // user matched
                         const payload = { id: user.id, name: user.name, avatar: user.avatar } // create JWT payload
-                        jwt.sign(payload, keys.secretKey, { expiresIn: 3600 }, (err, token) => {
+                        jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                             res.json({ success: true, token: 'Bearer ' + token })
                         });
                         // res.json({ msg: 'Success' })
