@@ -10,7 +10,7 @@ import Login from "./components/auth/Login";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Navbar />
         <Route exact path="/" component={Landing} />
         <div className="container">
