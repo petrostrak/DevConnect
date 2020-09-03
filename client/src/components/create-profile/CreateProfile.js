@@ -109,8 +109,8 @@ class CreateProfile extends Component {
         ]
 
         return (
-            <div className="create-profile">
-                <di className="container">
+            <div className="create-profile" style={{height: '100%', marginBottom: '120px'}}>
+                <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
                             <h1 className="display-4 text-center">Create your Profile</h1>
@@ -208,7 +208,7 @@ class CreateProfile extends Component {
                             </form>
                         </div>
                     </div>
-                </di>
+                </div>
             </div>
         )
     }
