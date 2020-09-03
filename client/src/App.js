@@ -14,7 +14,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import { clearCurrentProfile } from "./actions/profileActions";
-
+import CreateProfile from './components/create-profile/CreateProfile'
 import PrivateRoute from './components/common/PrivateRoute';
 
 // Check for token
@@ -49,6 +49,9 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Switch> // Private routes should be rounded with Switch to prevent issues with redirection
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            </Switch>
+            <Switch> // Private routes should be rounded with Switch to prevent issues with redirection
+              <PrivateRoute exact path="/create-profile" component={CreateProfile} />
             </Switch>
           </div>
           <Footer />
