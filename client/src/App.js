@@ -47,10 +47,11 @@ function App() {
           <div className="container">
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Switch> // Private routes should be rounded with Switch to prevent issues with redirection
+            {/*Private routes should be rounded with Switch to prevent issues with redirection*/}
+            <Switch> 
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
-            <Switch> // Private routes should be rounded with Switch to prevent issues with redirection
+            <Switch>
               <PrivateRoute exact path="/create-profile" component={CreateProfile} />
             </Switch>
           </div>
