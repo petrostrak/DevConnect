@@ -32,12 +32,6 @@ class AddExperience extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.errors) {
-      this.setState({ errors: nextProps.errors })
-    }
-  }
-
   onSubmit(e) {
     e.preventDefault();
 
@@ -69,7 +63,7 @@ class AddExperience extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="add-experience">
+      <div className="add-experience" style={{height: '100%', marginBottom: '120px'}}>
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
