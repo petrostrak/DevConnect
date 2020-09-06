@@ -4,7 +4,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addExperience } from '../../actions/profileActions'
+import { addExperience } from '../../actions/profileActions';
 
 class AddExperience extends Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class AddExperience extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="add-experience" style={{height: '100%', marginBottom: '120px'}}>
+      <div className="add-experience">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -161,4 +161,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addExperience })(withRouter(AddExperience));
+export default connect(mapStateToProps, { addExperience })(
+  withRouter(AddExperience)
+);

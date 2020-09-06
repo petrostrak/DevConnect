@@ -87,7 +87,8 @@ class CreateProfile extends Component {
         twitter: profile.twitter,
         facebook: profile.facebook,
         linkedin: profile.linkedin,
-        youtube: profile.youtube
+        youtube: profile.youtube,
+        instagram: profile.instagram
       });
     }
   }
@@ -188,7 +189,7 @@ class CreateProfile extends Component {
     ];
 
     return (
-      <div className="create-profile" style={{height: '100%', marginBottom: '120px'}}>
+      <div className="create-profile">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
